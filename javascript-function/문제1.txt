@@ -1,0 +1,171 @@
+<html>
+
+  <head>
+
+      <script type="text/javascript">
+
+      console.log = function(msg){
+
+        document.write(msg+'<br>');
+
+      }
+
+
+
+      function checkUndefined(n){
+
+        if (typeof(n) == 'undefined'){
+
+            n = 0;
+
+        }
+
+        return n;
+
+      }
+
+
+
+      function getAverage(javascript, python, java, ruby, swift){
+
+        javascript = checkUndefined(javascript);
+
+        python = checkUndefined(python);
+
+        java = checkUndefined(java);
+
+        ruby = checkUndefined(ruby);
+
+        swift = checkUndefined(swift);
+
+
+
+        var average = (javascript + python + java + ruby, swift) / 5;
+
+
+
+        return average;
+
+      }
+
+
+
+      function getMax(javascript, python, java, ruby, swift){
+
+        var max = javascript;
+
+
+
+        max = (max > python) ? max : python;
+
+        max = (max > java ) ? max : java;
+
+        max = (max > ruby) ? max : ruby;
+
+        max = (max > swift) ? max : swift;
+
+
+
+        return max;
+
+      }
+
+
+
+      function getMin(javascript, python, java, ruby, swift){
+
+        var min = javascript;
+
+        min = (min < python) ? min : python;
+
+        min = (min < java) ? min : java;
+
+        min = (min < ruby) ? min : ruby;
+
+        min = (min < swift) ? min : swift;
+
+
+
+        return min;
+
+      }
+
+
+
+      var A_javascript = 90;
+
+      var A_python= 80;
+
+      var A_java = 50;
+
+      var A_ruby = 40;
+
+      var A_swift = 10;
+
+
+
+      var B_javascript = 90;
+
+      var B_python= 30;
+
+      var B_java = 100;
+
+      var B_ruby = 50;
+
+      var B_swift = 50;
+
+
+
+
+
+      var C_javascript = 20;
+
+      var C_python= 30;
+
+      var C_java = 60;
+
+      var C_ruby = 50;
+
+      var C_swift = 20;
+
+
+
+      var A_average = getAverage(A_javascript, A_python, A_java, A_ruby, A_swift);
+
+      var B_average = getAverage(B_javascript, B_python, B_java, B_ruby, B_swift);
+
+      var C_average = getAverage(C_javascript, C_python, C_java, C_ruby, C_swift);
+
+
+
+      var A_max = getMax(A_javascript, A_python, A_java, A_ruby, A_swift);
+
+      var B_max = getMax(B_javascript, B_python, B_java, B_ruby, B_swift);
+
+      var C_max = getMax(C_javascript, C_python, C_java, C_ruby, C_swift);
+
+
+
+      var A_min = getMin(A_javascript, A_python, A_java, A_ruby, A_swift);
+
+      var B_min = getMin(B_javascript, B_python, B_java, B_ruby, B_swift);
+
+      var C_min = getMin(C_javascript, C_python, C_java, C_ruby, C_swift);
+
+      
+
+      console.log('A 학생의 평균 점수는 ' + A_average + ' , 최고 점수는 ' + A_max + ' , 최하 점수는 ' + A_min + ' 입니다.');
+
+      console.log('B 학생의 평균 점수는 ' + B_average + ' , 최고 점수는 ' + B_max + ' , 최하 점수는 ' + B_min + ' 입니다.');
+
+      console.log('C 학생의 평균 점수는 ' + C_average + ' , 최고 점수는 ' + C_max + ' , 최하 점수는 ' + C_min + ' 입니다.');
+
+      </script>
+
+  </head>
+
+  <body>
+
+  </body>
+
+</html>

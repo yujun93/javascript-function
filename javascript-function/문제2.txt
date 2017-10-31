@@ -1,0 +1,121 @@
+<html>
+
+  <head>
+
+    <title>2번 문제</title>
+
+    <script type="text/javascript">
+
+    console.log = function(msg){
+
+      document.write(msg+'<br>');
+
+    }
+
+    
+
+    function showGraph(mid, end){
+
+      var result = "";
+
+
+
+      for(var i=0; i<mid; i++){
+
+        result += "*";
+
+      }
+
+
+
+      for(var i=0; i<(10-mid); i++){
+
+        result += "_";
+
+      }
+
+
+
+      result += " + ";
+
+
+
+      for(var i=0; i<end; i++){
+
+        result += "*";
+
+      }
+
+
+
+      for(var i=0; i<(10-end); i++){
+
+        result += "_";
+
+      }
+
+
+
+      result += " = ";
+
+
+
+      for (var i = 0; i < (mid + end); i++) {
+
+          result += "*";
+
+      }
+
+
+
+      for (var i = 0; i < 20 - (mid + end); i++) {
+
+          result += "_";
+
+      }
+
+
+
+      return result;
+
+    }
+
+
+
+    /* 점수 */
+
+    var A_mid = 10;
+
+    var A_end = 8;
+
+
+
+    var B_mid = 1;
+
+    var B_end = 2;
+
+
+
+    var C_mid = 9;
+
+    var C_end = 5;
+
+
+
+    console.log("A : " + showGraph(A_mid, A_end));
+
+    console.log("B : " + showGraph(B_mid, B_end));
+
+    console.log("C : " + showGraph(C_mid, C_end));
+
+    </script>
+
+  </head>
+
+  <body>
+
+
+
+  </body>
+
+</html>
