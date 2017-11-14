@@ -9,18 +9,18 @@
 				arguments[i] = arguments[i].split('\n');
 			for(var j=0;j<arguments[i].length;j++){  
 				temp = arguments[i][j];
-				arguments[i][j] = new Array(temp.length);          //7~17  입력받은 'O' 을 층수구별하기위해 3차월 배열로 저장 1차배열은 입력받은 값의 순서
-				for(var z=0;z<temp.length;z++){                    //2차배열은 입력받은 값의 순서, 2차배열은 입력받은 값의 층수 구별
-					arguments[i][j][z]=1;                          //3차원 배열은 층수마다 'O'의 갯수
+				arguments[i][j] = new Array(temp.length);                   //7~17  입력받은 'O' 을 층수구별하기위해 3차월 배열로 저장 1차배열은 입력받은 값의 순서, 2차배열은 입력받은 값의 층수 구별 ,3차원 배열은 층수마다 'O'의 갯수
+				for(var z=0;z<temp.length;z++){
+					arguments[i][j][z]=1;
 				}
 			} 			
 		}
 		/*var rowmax=0;
 		var colmax=0;
 		for(var i=0;i<arguments.length;i++){	
-			for(var j=0;j<arguments[i].length;j++){                   //18~ 30   삼차월배열을 층수마다 더한 값을 입력된 'O'의 가로,세로 
-				if(colmax < arguments[i][j].length){                 //최대치 배열에 저장한뒤 다시 문자열에 저장시키려 시도
-					colmax = arguments[i][j].length;             
+			for(var j=0;j<arguments[i].length;j++){
+				if(colmax < arguments[i][j].length){
+					colmax = arguments[i][j].length;             //18~ 30   삼차월배열을 층수마다 더한 값을 입력된 'O'의 가로,세로 최대치 배열에 저장한뒤 다시 문자열에 저장시키려 시도
 				}
 			}
 		if(rowmax < arguments[i].length){
@@ -33,9 +33,9 @@
 		var str=0;
 	
 		for(var i=0;arguments.length;i++){
-			for(var j=0;arguments[i][j].length;j++){            //32~47 다른방법으로 str에 3차원 배열 원소값을 다더한후 test 문자열에 저장 
-				for(var z=0;arguments[i].length;z++){           //반복문 끝난후 test값 리턴 (38~40 오류 미해결..)
-					if(arguments[i][z].length < j){                 
+			for(var j=0;arguments[i][j].length;j++){
+				for(var z=0;arguments[i].length;z++){
+					if(arguments[i][z].length < j){                  //32~47 다른방법으로 str에 3차원 배열 원소값을 다더한후 test 문자열에 저장 반복문 끝난후 test값 리턴 (38~40 오류 미해결..)
 					str += arguments[i][z][j];		
 					}	
 				}
