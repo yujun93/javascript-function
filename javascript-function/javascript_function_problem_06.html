@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<pre>
+    <script type="text/javascript">
+      function print_scores_chart() {
+		var max=0;
+		var min=arguments[0];
+		var maxswitch=1;
+        document.write("<br>-------------<br>");
+		for(var i=0; i<arguments.length;i++){
+			if(max<arguments[i]){
+				max=arguments[i];
+			}
+			if(min>arguments[i]){
+				min=arguments[i];
+			}
+		}
+		for(var i=10;i > 0 ;i-- )
+		{
+			if(i > max){
+				for(var j=0;j<arguments.length;j++){
+				document.write(" ");
+				}
+			document.write("<br>");
+			}else{
+				for(var j=0; j<arguments.length;j++){
+					if(i==arguments[j]){
+						document.write("*");
+						arguments[j] = arguments[j] -1;				
+					}
+					else{
+						document.write(" ");
+					}					
+				}
+			if(i==max) document.write("   <= max");
+			if(i==min) document.write("   <= min");
+									
+			document.write("<br>");
+			}
+		}
+		document.write("-------------<br>");
+      }
+	  print_scores_chart(1, 2, 3, 4, 5);
+      print_scores_chart(10, 1, 10, 1, 5, 5);
+      print_scores_chart(5, 2, 2, 9, 3, 5, 9);
+    </script>
+	</pre>
+</head>
+<body>
+</body>
+</html>
+
+
