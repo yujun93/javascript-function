@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript">
+        function check_string() {
+          		  
+		  var strData=arguments[0];
+		  var check;
+		  for(var i=1; i<arguments.length;i++) strData += arguments[i];
+		  console.log(strData);
+
+		  if (strData.length % 2 != 0) return false; // 입력받은 '(' 또는 ')' 가 홀수면 false 를 return	
+		  check = strData.charAt(1);
+
+		  console.log(check);
+
+
+		  //그다음 해결방법을 잘 모르겠습니다 교수님 ㅠㅠ
+
+
+		  
+          return true;
+        }
+
+        expect(check_string('(())())'), false);
+        expect(check_string('(((()())()'), false);
+        expect(check_string('(()())((()))'), true);
+        expect(check_string('((()()(()))(((())))()'), false);
+        expect(check_string('()()()()(()()())()'), true);
+        expect(check_string('(()((())()('), false);
+
+        function expect(l, r) {
+            if (l === r)
+                console.log('pass');
+            else
+                console.log('fail');
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>
